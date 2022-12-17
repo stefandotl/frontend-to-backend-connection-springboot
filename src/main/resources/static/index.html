@@ -12,43 +12,12 @@
         <h1>API Connection Example</h1>
         <p>This page demonstrates a simple example of how to connect to an API using JavaScript.</p>
 
-        <button id="get-person-button">Get Person from API</button>
-        <button id="get-data-button">Get Data from API</button>
-        <div id="api-response">
+        <button id="get-user-button">Get User from API</button>
+        <div id="user-button-response">
         <!-- The received message from the backend will be displayed here -->
         </div>
     </div>
 
-    <script>
-      // Get a reference to the button and the response container
-      const personButton = document.querySelector("#get-person-button");
-      const responseContainer = document.querySelector("#api-response");
-
-      function fetchPersonData() {
-        // Make an HTTP GET request to the API endpoint
-        fetch("http://localhost:8080/person")
-        .then(response => response.json()) // Parse the response as JSON
-        .then(data => {
-        // Update the response container with the received message
-        var table = "<table class='table'><tr><th>Key</th><th>Value</th></tr>";
-        for (var key in data) {
-            if (data.hasOwnProperty(key)) {
-                table += "<tr><td>" + key + "</td><td>" + data[key] + "</td></tr>";
-            }
-        }
-        table += "</table>";
-        // console.log(data);
-        responseContainer.innerHTML = table;
-        })
-        .catch(error => {
-        // Handle any errors here
-        console.error(error);
-        });
-    }
-
-
-      // Add an event listener to the button
-      personButton.addEventListener("click", fetchPersonData);
-    </script>
+    <script src="js/getUserButton.js"></script>
   </body>
 </html>
