@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,7 +14,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
 
     @GetMapping("/user")
     @ResponseBody
