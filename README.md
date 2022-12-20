@@ -7,4 +7,4 @@ To get started with this project, follow these steps:
     3. Start the Tomcat server by executing the following command: mvn spring-boot:run    
     4. Now you can receive the User-Data from the Backend with the "Get User from API" button.
 
-That's it! Now can see the data in the index.html file. The data is received from the server running at http://localhost:8080.
+That's it! Now can see the browser. The data is received from the server running at http://localhost:8080.
